@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSIEasyNotes", "GPSIEasyNotes.csproj", "{6ED95B3E-5A93-4ECE-91CB-F74416D8FA2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ED95B3E-5A93-4ECE-91CB-F74416D8FA2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED95B3E-5A93-4ECE-91CB-F74416D8FA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED95B3E-5A93-4ECE-91CB-F74416D8FA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED95B3E-5A93-4ECE-91CB-F74416D8FA2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED31FD70-5B2D-486D-ADC2-43DA4CE404B9}
+	EndGlobalSection
+EndGlobal
