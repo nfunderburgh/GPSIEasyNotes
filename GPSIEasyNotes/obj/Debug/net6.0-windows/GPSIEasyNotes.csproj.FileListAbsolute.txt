@@ -17,3 +17,4 @@ D:\Github\GPSIEasyNotes\GPSIEasyNotes\obj\Debug\net6.0-windows\GPSIEasyNotes.gen
 D:\Github\GPSIEasyNotes\GPSIEasyNotes\obj\Debug\net6.0-windows\ref\GPSIEasyNotes.dll
 D:\Github\GPSIEasyNotes\GPSIEasyNotes\bin\Debug\net6.0-windows\MaterialSkin.dll
 D:\Github\GPSIEasyNotes\GPSIEasyNotes\obj\Debug\net6.0-windows\GPSIEasyNotes.csproj.CopyComplete
+D:\Github\GPSIEasyNotes\GPSIEasyNotes\obj\Debug\net6.0-windows\GPSIEasyNotes.Properties.Resources.resources

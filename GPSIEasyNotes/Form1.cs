@@ -70,12 +70,35 @@ namespace GPSIEasyNotes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Font labelFont = new Font("Microsoft Sans Serif", 12);
+            Font labelFont = new Font("Microsoft Sans Serif", 15);
             callerLabel.Font = labelFont;
             companyLabel.Font = labelFont;
             snLabel.Font = labelFont;
             issueLabel.Font = labelFont;
             resolutionLabel.Font = labelFont;
+
+            tabPage1.BackColor = Color.White;
+
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            callerTextBox.Text = "";
+            companyTextBox.Text = "";
+            snTextBox.Text = "";
+            issueTextBox.Text = "";
+            resolutionTextBox.Text = "";
+        }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            string copyText = "Hi " + callerTextBox.Text + "\n" + "\n" +
+                              callerLabel.Text + " " + callerTextBox.Text + "\n" +
+                              companyLabel.Text + " " + companyTextBox.Text + "\n" +
+                              snLabel.Text + " " + snTextBox.Text + "\n" +
+                              issueLabel.Text + " " + issueTextBox.Text + "\n" +
+                              resolutionLabel.Text + " " + resolutionTextBox.Text;
+            Clipboard.SetText(copyText);
         }
     }
 }
