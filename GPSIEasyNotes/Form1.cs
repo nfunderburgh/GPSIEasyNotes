@@ -7,6 +7,11 @@ namespace GPSIEasyNotes
 {
     public partial class Form1 : MaterialForm
     {
+        string caller = "";
+        string company = "";
+        string sn = "";
+        string issue = "";
+        string resolution = "";
         public Form1()
         {
             InitializeComponent();
@@ -78,11 +83,27 @@ namespace GPSIEasyNotes
             resolutionLabel.Font = labelFont;
 
             tabPage1.BackColor = Color.White;
+            callerLabel.BackColor = Color.White;
+            companyLabel.BackColor = Color.White;
+            snLabel.BackColor = Color.White;
+            issueLabel.BackColor = Color.White;
+            resolutionLabel.BackColor = Color.White;
 
+            callerTextBox.BackColor = Color.White;
+            companyTextBox.BackColor = Color.White;
+            snTextBox.BackColor = Color.White;
+            issueTextBox.BackColor = Color.White;
+            resolutionTextBox.BackColor = Color.White;
         }
 
         private void resetButton_Click(object sender, EventArgs e)
         {
+            caller = callerTextBox.Text;
+            company = companyTextBox.Text;
+            sn = snTextBox.Text;
+            issue = issueTextBox.Text;
+            resolution = resolutionTextBox.Text;
+
             callerTextBox.Text = "";
             companyTextBox.Text = "";
             snTextBox.Text = "";
@@ -99,6 +120,20 @@ namespace GPSIEasyNotes
                               issueLabel.Text + " " + issueTextBox.Text + "\n" +
                               resolutionLabel.Text + " " + resolutionTextBox.Text;
             Clipboard.SetText(copyText);
+        }
+
+        private void undoButton_Click(object sender, EventArgs e)
+        {
+            callerTextBox.Text = caller;
+            companyTextBox.Text = company;
+            snTextBox.Text = sn;
+            issueTextBox.Text = issue;
+            resolutionTextBox.Text = resolution;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

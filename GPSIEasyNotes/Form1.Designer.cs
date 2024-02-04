@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.undoButton = new MaterialSkin.Controls.MaterialButton();
             this.resetButton = new MaterialSkin.Controls.MaterialButton();
             this.copyButton = new MaterialSkin.Controls.MaterialButton();
             this.resolutionTextBox = new System.Windows.Forms.TextBox();
@@ -46,8 +47,17 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.snNDTextBox = new System.Windows.Forms.TextBox();
+            this.callerNDLabel = new System.Windows.Forms.Label();
+            this.companyNDTextBox = new System.Windows.Forms.TextBox();
+            this.callerNDTextBox = new System.Windows.Forms.TextBox();
+            this.snNDLabel = new System.Windows.Forms.Label();
+            this.companyNDLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.caseNDLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -69,6 +79,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.undoButton);
             this.tabPage1.Controls.Add(this.resetButton);
             this.tabPage1.Controls.Add(this.copyButton);
             this.tabPage1.Controls.Add(this.resolutionTextBox);
@@ -87,6 +98,28 @@
             this.tabPage1.Size = new System.Drawing.Size(298, 379);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Notes";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // undoButton
+            // 
+            this.undoButton.AutoSize = false;
+            this.undoButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.undoButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.undoButton.Depth = 0;
+            this.undoButton.HighEmphasis = true;
+            this.undoButton.Icon = null;
+            this.undoButton.Location = new System.Drawing.Point(165, 321);
+            this.undoButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.undoButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.undoButton.Name = "undoButton";
+            this.undoButton.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.undoButton.Size = new System.Drawing.Size(112, 36);
+            this.undoButton.TabIndex = 15;
+            this.undoButton.Text = "undo";
+            this.undoButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.undoButton.UseAccentColor = false;
+            this.undoButton.UseVisualStyleBackColor = true;
+            this.undoButton.Click += new System.EventHandler(this.undoButton_Click);
             // 
             // resetButton
             // 
@@ -222,6 +255,15 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.caseNDLabel);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.snNDTextBox);
+            this.tabPage2.Controls.Add(this.callerNDLabel);
+            this.tabPage2.Controls.Add(this.companyNDTextBox);
+            this.tabPage2.Controls.Add(this.callerNDTextBox);
+            this.tabPage2.Controls.Add(this.snNDLabel);
+            this.tabPage2.Controls.Add(this.companyNDLabel);
+            this.tabPage2.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabPage2.Location = new System.Drawing.Point(124, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -245,6 +287,76 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // snNDTextBox
+            // 
+            this.snNDTextBox.Location = new System.Drawing.Point(124, 124);
+            this.snNDTextBox.Name = "snNDTextBox";
+            this.snNDTextBox.Size = new System.Drawing.Size(154, 23);
+            this.snNDTextBox.TabIndex = 14;
+            // 
+            // callerNDLabel
+            // 
+            this.callerNDLabel.AutoSize = true;
+            this.callerNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.callerNDLabel.Location = new System.Drawing.Point(49, 53);
+            this.callerNDLabel.Name = "callerNDLabel";
+            this.callerNDLabel.Size = new System.Drawing.Size(69, 25);
+            this.callerNDLabel.TabIndex = 13;
+            this.callerNDLabel.Text = "Caller:";
+            // 
+            // companyNDTextBox
+            // 
+            this.companyNDTextBox.Location = new System.Drawing.Point(124, 88);
+            this.companyNDTextBox.Name = "companyNDTextBox";
+            this.companyNDTextBox.Size = new System.Drawing.Size(154, 23);
+            this.companyNDTextBox.TabIndex = 12;
+            // 
+            // callerNDTextBox
+            // 
+            this.callerNDTextBox.Location = new System.Drawing.Point(124, 55);
+            this.callerNDTextBox.Name = "callerNDTextBox";
+            this.callerNDTextBox.Size = new System.Drawing.Size(154, 23);
+            this.callerNDTextBox.TabIndex = 11;
+            // 
+            // snNDLabel
+            // 
+            this.snNDLabel.AutoSize = true;
+            this.snNDLabel.BackColor = System.Drawing.Color.White;
+            this.snNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.snNDLabel.Location = new System.Drawing.Point(66, 119);
+            this.snNDLabel.Name = "snNDLabel";
+            this.snNDLabel.Size = new System.Drawing.Size(52, 25);
+            this.snNDLabel.TabIndex = 10;
+            this.snNDLabel.Text = "S/N:";
+            // 
+            // companyNDLabel
+            // 
+            this.companyNDLabel.AutoSize = true;
+            this.companyNDLabel.BackColor = System.Drawing.Color.White;
+            this.companyNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.companyNDLabel.Location = new System.Drawing.Point(15, 83);
+            this.companyNDLabel.Name = "companyNDLabel";
+            this.companyNDLabel.Size = new System.Drawing.Size(103, 25);
+            this.companyNDLabel.TabIndex = 9;
+            this.companyNDLabel.Text = "Company:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(124, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(154, 23);
+            this.textBox1.TabIndex = 15;
+            // 
+            // caseNDLabel
+            // 
+            this.caseNDLabel.AutoSize = true;
+            this.caseNDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.caseNDLabel.Location = new System.Drawing.Point(53, 21);
+            this.caseNDLabel.Name = "caseNDLabel";
+            this.caseNDLabel.Size = new System.Drawing.Size(65, 25);
+            this.caseNDLabel.TabIndex = 16;
+            this.caseNDLabel.Text = "Case:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -257,6 +369,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +394,14 @@
         private TextBox snTextBox;
         private MaterialSkin.Controls.MaterialButton resetButton;
         private MaterialSkin.Controls.MaterialButton copyButton;
+        private MaterialSkin.Controls.MaterialButton undoButton;
+        private Label caseNDLabel;
+        private TextBox textBox1;
+        private TextBox snNDTextBox;
+        private Label callerNDLabel;
+        private TextBox companyNDTextBox;
+        private TextBox callerNDTextBox;
+        private Label snNDLabel;
+        private Label companyNDLabel;
     }
 }
